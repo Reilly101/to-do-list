@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../week 2/my-astro-site"
+		},
+		{
+			"path": "../../week-4-server"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}

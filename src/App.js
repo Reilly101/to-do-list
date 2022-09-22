@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+//import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Btn />
+      <Btn />
+      <Btn />
+      <Btn />
+      
     </div>
   );
+}
+function Btn(){
+  
+const [count, setCount] = React.useState(0);
+// let count = 0;
+
+// function setCount(num){
+//   count = num
+//   console.log(count)
+// }
+
+  return (
+    <>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <RedOrGreen num={count}/> 
+    </>
+  );
+}
+
+function RedOrGreen(props){
+  return(
+    <div style={{backgroundColor: (props.num%2) ?'green':'red', width:'50px', height:'50px'}}></div>
+  )
 }
 
 export default App;
